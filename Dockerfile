@@ -29,6 +29,8 @@ RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/superviso
 
 RUN a2dissite 000-default && a2ensite apache2-graphite
 
+RUN chmod 755 /docker-entrypoint.sh
+
 # Apache
 EXPOSE 80
 # Carbon line receiver port
