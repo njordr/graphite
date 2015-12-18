@@ -4,9 +4,9 @@ Container with [graphite](http://graphite.wikidot.com/) based on ubuntu
 
 The container is configured to use postgres or mysql as database.
 
-Start a container with [postgresql](https://hub.docker.com/_/postgres/). Execute the following commands (docker >= 1.9):
+To start the container execute the following commands (docker >= 1.9):
 
-1. docker network create network-service-01 (this will create e new network)
+1. docker network create network-service-01 (this will create a new network)
 2. If you want to use postgres:
   * docker run --name postgres-01 -e POSTGRES_PASSWORD=vagrant -v /var/docker_data/pgsql:/var/lib/postgresql/data --net network-service-01 -d postgres (this will start postgres container)
   * docker exec -ti postgres-01 bash
