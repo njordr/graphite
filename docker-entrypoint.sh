@@ -17,4 +17,6 @@ if [ ! -z $FIRSTRUN ]; then
     graphite-manage syncdb --noinput
 fi
 
+chown -R _graphite._graphite /var/lib/graphite
+
 /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
